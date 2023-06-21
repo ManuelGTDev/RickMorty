@@ -58,7 +58,7 @@ fun CharacterDetailScreen(
         val characterGender = character.gender
         val characterStatus = character.status
         val characterLocation = character.location.name
-        val characterOrigin = character.origin
+        val characterOrigin = character.origin.name
 
         Box(
             modifier = Modifier
