@@ -3,6 +3,7 @@ package com.mgtapps.rickmorty.data.repository
 
 import com.mgtapps.rickmorty.common.Resource
 import com.mgtapps.rickmorty.data.remote.RickMortyApi
+import com.mgtapps.rickmorty.data.remote.dto.GetCharacterResponse
 import com.mgtapps.rickmorty.data.remote.dto.GetCharactersResponse
 import com.mgtapps.rickmorty.domain.model.Character
 import com.mgtapps.rickmorty.domain.repository.CharacterRepository
@@ -14,7 +15,7 @@ class RepositoryImpl @Inject constructor(private val api : RickMortyApi) : Chara
         return api.getCharacters(page)
     }
 
-    override suspend fun getCharacterById(characterId: Int): Resource<Character> {
+    override suspend fun getCharacterById(characterId: Int): GetCharacterResponse {
         return api.getCharacter(characterId)
     }
 

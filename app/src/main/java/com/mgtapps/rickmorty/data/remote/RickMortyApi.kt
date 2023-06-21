@@ -1,6 +1,7 @@
 package com.mgtapps.rickmorty.data.remote
 
 import com.mgtapps.rickmorty.common.Resource
+import com.mgtapps.rickmorty.data.remote.dto.GetCharacterResponse
 import com.mgtapps.rickmorty.data.remote.dto.GetCharactersResponse
 import com.mgtapps.rickmorty.data.remote.dto.character.CharacterDto
 import com.mgtapps.rickmorty.domain.model.Character
@@ -15,6 +16,6 @@ interface RickMortyApi {
         @Query("page") page: Int): GetCharactersResponse //Lista con todos los personajes
 
     @GET("character/{id}")
-    suspend fun getCharacter(@Path("id") id:Int): Resource<Character>//Obtener solo un personaje
+    suspend fun getCharacter(@Path("id") id:Int): GetCharacterResponse//Obtener solo un personaje
 
 }

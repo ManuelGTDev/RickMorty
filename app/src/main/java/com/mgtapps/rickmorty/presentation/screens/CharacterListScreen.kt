@@ -172,10 +172,9 @@ fun CharacterEntry(
             .aspectRatio(1f)
             .background(Color.White)
             .clickable {
-                //Pendiente de terminar
-                //navController.navigate(
-                   // "characater_detail_screen/${entry.id}"
-                //)
+                navController.navigate(
+                    "characater_detail_screen/${entry.id}"
+                )
             }
     ) {
         Box {
